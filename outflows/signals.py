@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
@@ -19,6 +21,8 @@ def send_outflow_event(sender, instance, **kwargs):
     notify = Notify()
 
     data = {
+        'event_type': 'create_outflow',
+        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         'product': str(instance.product),
         'quantity': instance.quantity,
     }
