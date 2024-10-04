@@ -8,6 +8,6 @@ class Notify:
 
     def send_event(self, data):
         requests.post(
-            url=f'{self.__base_url}/af8e8b41-bfde-42af-9efa-269fa16724bf',
+            url=f'{self.__base_url}/80aec277-ad29-4e11-980f-a6cf36646185',
             json=data,
         )
