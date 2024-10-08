@@ -30,4 +30,4 @@ def send_outflow_event(sender, instance, **kwargs):
         'description': instance.description,
     }
 
-    notify.send_event(data)
+    notify.send_order_event(data)
