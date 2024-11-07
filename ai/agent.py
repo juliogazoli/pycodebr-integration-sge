@@ -32,7 +32,7 @@ class SGEAgent:
                 },
                 {
                     'role': 'user',
-                    'content': prompts.USER_PROMPT.replace('{{data}}', self.__get_data),
+                    'content': prompts.USER_PROMPT.replace('{{data}}', self.__get_data()),
                 },
             ],
         )
